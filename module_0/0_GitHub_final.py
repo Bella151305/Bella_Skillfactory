@@ -6,39 +6,23 @@
 
 import numpy as np
 
-def game_core_v3(number):
-    '''Сначала загаданное число на эквивалентность 50. Затем уменьшаем или увеличиваем его
-       в зависимости от того, больше оно или меньше нужного на 10. На последнем этапе перебираем по 1.
-       Функция принимает загаданное число и возвращает число попыток'''
-    count = 0
-    predict = 50  # проверяем на эквивалентность 50
-    if number > predict:
-        for digit in [x for x in range(10,101,10)][5:]:  # формируем список выше 50
-            predict = digit
-            count += 1
-            if number == predict:
-                break
-            elif number < predict:
-                in_list = [in_digit for in_digit in range(digit-1,digit)]  # список для перебора по 1
-                for in_digit in in_list:
-                    predict = in_digit
-                    count += 1
-                if number == predict:
-                    break
-    elif number < predict:
-        for digit in [x for x in range(10,101,10)][:5]:  # формируем список ниже 50
-            predict = digit
-            count += 1
-            if number == predict:
-                break
-            elif number > predict:
-                in_list = [in_digit for in_digit in range(digit-1,digit)] # список для перебора по 1
-                for in_digit in in_list:
-                    predict = in_digit
-                    count += 1
-                if number == predict:
-                    break
-    return(count) # выход из цикла, если угадали
+def game_core_v3p(number):
+    '''Начинаем угадывать с середины отрезка. Далее ограничиваем отрезок поиска медианой списка чисел
+    между максимальным и минимальным значением. Для начала поиска минимум = 1, максимум = 100, медиана 50'''
+    count = 1
+    predict = 50
+    minimum = 1
+    maximum = 100
+    while number != predict:
+        count+=1
+        if number > predict:
+            minimum = predict
+            predict = (maximum + minimum + 1) // 2
+        else:
+            maximum = predict
+            predict = (maximum + minimum) // 2
+    return count
+
         
 def score_game(game_core):
     '''Запускаем игру 1000 раз, чтобы узнать, как быстро игра угадывает число'''
