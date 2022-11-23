@@ -1,12 +1,13 @@
 # Bella_Skillfactory
  Public
-Что в папках:
-- module_0: Угадай число! (первая программа на Python)
-- module_1: Кино-викторина (обработка данных)
-- module_2: EDA, подбор параметров
-- module_3: Предсказание рейтингов ресторанов (EDA, подбор параметров)
-- module_5: Кредитный скоринг
-- module_6: Предсказание стоимости автомобиля по его характеристикам.
-- module_8: Классификация моделей авто по фото.
-- module_9: Предсказание стоимости автомобиля по его характеристикам, описанию и фотографии.
-- diploma_final: Классификация изображений с помощью нейронных сетей.
+In folders:
+- module_0: Guess the number! (the first Python program).
+- module_1: Movie Quiz (data processing).
+- module_2: EDA, parameters ' selection.
+- module_3: Restaurant ratings prediction (EDA, parameters' selection).
+- module_5: Credit scoring.
+- module_6: Cars cost prediction based on its characteristics.
+- module_8: Car classification models by photo.
+- module_9: Cars cost prediction based on its characteristics, descriptions and photos.
+- diploma_final: Images of artpieces classification using neural networks.
+- math_and_python: Algorithms for some mathematical cases.
