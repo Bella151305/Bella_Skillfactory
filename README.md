@@ -2,10 +2,11 @@
  Public
 
 In folders:
-- math_and_python: Algorithms for some mathematical cases.
+- math_and_python: Algorithms for some mathematical cases (without SciPy).
   - Number factorization and Sieve of Eratosthenes
   - Newton Binomial and Pascal's Triangle
   - Viet for integer coefficients and а = +-1
+  - Mersenne_numbers
 - diploma_final: Images of artpieces classification using neural networks.
 - module_0: Guess the number! (the first Python program).
 - module_1: Movie Quiz (data processing).
